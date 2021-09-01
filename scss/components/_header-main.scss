@@ -23,6 +23,7 @@
     @include mq('lg') {
         & h1 {
             max-width: 50px;
+            margin-left: 10px;
         }
         & input {
             width: 99%;

@@ -497,6 +497,7 @@ nav i {
 @media (min-width: 1024px) {
   .main-header h1 {
     max-width: 50px;
+    margin-left: 10px;
   }
   .main-header input {
     width: 99%;
