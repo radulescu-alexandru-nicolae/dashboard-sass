@@ -1,0 +1,39 @@
+.alerta {
+    position: relative;
+    background-color: rgb(123, 48, 242);
+    color: white;
+    width: $dimension-main;
+    margin: auto;
+    font-size: 0.75em;
+    border-radius: 10px;
+    @include flexy($dir: row);
+    align-items: center;
+    height: 50px;
+    & p {
+        text-decoration: none;
+        width: 90%;
+        margin: auto;
+    }
+    &::after {
+        content: 'X';
+        position: absolute;
+        color: white;
+        right: 20px;
+        font-size: 0.8em;
+        ;
+    }
+    @include mq('med') {
+        font-size: 1.1em;
+    }
+    @include mq('lg') {
+        height: 60px;
+        & p {
+            width: 97%;
+            font-size: 1.3em;
+        }
+        &::after {
+            font-size: 1em;
+            right: 30px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.message {
+    border-bottom: 1px solid wheat;
+    padding-bottom: 20px;
+    & .container-message {
+        width: $dimension-main;
+        margin: auto;
+        & h2 {
+            text-transform: uppercase;
+            font-size: $font-size-h2;
+        }
+        & form {
+            @include flexy($dir: column);
+            row-gap: 20px;
+            & input {
+                height: 50px;
+                border-radius: 5px;
+                background-color: rgb(255, 239, 210);
+                border: 2px solid wheat;
+                &::-webkit-input-placeholder {
+                    padding-left: 10px;
+                    color: rgb(126, 126, 126);
+                }
+            }
+            & textarea {
+                height: 100px;
+                background-color: rgb(255, 239, 210);
+                border: 2px solid wheat;
+                border-radius: 5px;
+                &::-webkit-input-placeholder {
+                    padding-left: 10px;
+                    color: rgb(126, 126, 126);
+                    padding-top: 10px;
+                }
+            }
+            & button {
+                background-color: rgb(123, 48, 242);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 15px;
+                height: 60px;
+                @include flexy($just: center);
+                align-items: center;
+            }
+        }
+    }
+}

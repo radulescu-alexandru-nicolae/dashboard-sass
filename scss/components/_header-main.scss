@@ -1,0 +1,31 @@
+.main-header {
+    // @extend %commonbuttons;
+    @include flexy($dir: row, $just: flex-end);
+    width: 100%;
+    column-gap: 10px;
+    & h1 {
+        font-size: 1.2em;
+    }
+    & input {
+        width: 80%;
+        background-color: rgb(228, 228, 228);
+        border: 1px solid rgb(194, 194, 194);
+    }
+    @include mq('med') {
+        & h1 {
+            width: 10%;
+            min-width: 120px;
+        }
+        & input {
+            width: 90%;
+        }
+    }
+    @include mq('lg') {
+        & h1 {
+            max-width: 50px;
+        }
+        & input {
+            width: 99%;
+        }
+    }
+}

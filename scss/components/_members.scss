@@ -1,0 +1,89 @@
+.container-members-both {
+    border-bottom: 1px solid wheat;
+    & .container-members {
+        width: $dimension-main;
+        margin: auto;
+        @include flexy($dir: column);
+        row-gap: 20px;
+    }
+    & h2 {
+        text-transform: uppercase;
+        font-size: $font-size-h2;
+    }
+    & .persoane {
+        line-height: 10px;
+        @include flexy($dir: column);
+        row-gap: 50px;
+        align-items: center;
+        & .persoana {
+            box-sizing: border-box;
+            height: 250px;
+            @include flexy($dir: column, $just: center);
+            align-items: center;
+            border-top: 1px solid wheat;
+            width: 100%;
+            padding-top: 20px;
+            & img {
+                max-width: 200px;
+                border-radius: 100%;
+            }
+            & a {
+                text-decoration: none;
+                color: rgb(123, 48, 242);
+            }
+        }
+        & .persoana:nth-child(1) {
+            border-top: none
+        }
+    }
+    & .persoane-members {
+        line-height: 5px;
+    }
+    .persoane-activity {
+        line-height: 5px;
+        text-align: center;
+    }
+    .post {
+        line-height: 20px;
+    }
+    & .container-detalii-persoana {
+        text-align: center;
+    }
+    @include mq('med') {
+        & .persoane-members .persoana {
+            @include flexy($dir: row, $just: space-between);
+        }
+        & .container-detalii-persoana {
+            @include flexy($dir: row);
+            column-gap: 20px;
+            align-items: center;
+            text-align: left;
+        }
+        & .activity-text {
+            text-align: left;
+        }
+        & .persoane-activity .persoana {
+            @include flexy($dir: row, $just: flex-start);
+            column-gap: 20px;
+            position: relative;
+        }
+    }
+    @include mq('lg') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        & .members {
+            border-left: 1px solid wheat;
+            & .persoana {
+                border-bottom: 1px solid wheat
+            }
+        }
+        & .persoane-activity .persoana::after {
+            content: '>';
+            position: absolute;
+            color: rgb(123, 48, 242);
+            right: 0;
+            font-size: 35px;
+        }
+    }
+}

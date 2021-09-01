@@ -1,0 +1,6 @@
+main {
+    grid-area: main;
+    @include flexy($dir: column, $wrap: nowrap);
+    column-gap: 20px;
+    row-gap: 50px;
+}

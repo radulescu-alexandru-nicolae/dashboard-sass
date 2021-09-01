@@ -1,0 +1,6 @@
+.container-diagram {
+    width: $dimension-main;
+    margin: auto;
+    @include flexy($dir: column);
+    row-gap: 30px;
+}

@@ -1,0 +1,35 @@
+.traffic-header {
+    width: 100%;
+    margin: auto;
+    & ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        @include flexy($dir: row, $just: space-between);
+        column-gap: 10px;
+        max-width: 500px;
+    }
+    & h2 {
+        text-transform: uppercase;
+        font-size: $font-size-h2;
+    }
+    & li {
+        text-align: center;
+        width: 33%;
+        height: 50px;
+        @include flexy($just: center);
+        align-items: center;
+        border-radius: 20px;
+        transition: 0.5s all ease;
+    }
+    & li:nth-child(1) {
+        background-color: rgb(83, 245, 86);
+        color: white;
+    }
+    @include mq('med') {
+        @include flexy($dir: row, $just: space-between);
+        & ul {
+            min-width: 500px;
+        }
+    }
+}

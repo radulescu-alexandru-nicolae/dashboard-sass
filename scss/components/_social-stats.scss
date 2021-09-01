@@ -1,0 +1,38 @@
+.social-stats {
+    @include flexy($dir: column);
+    row-gap: 15px;
+    align-items: center;
+    & i {
+        color: white;
+        background-color: rgb(123, 48, 242);
+        padding: 20px;
+        border-radius: 50%;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    & .socializare {
+        height: 100px;
+        width: 95%;
+        margin: auto;
+        @include flexy($dir: row);
+        column-gap: 20px;
+        align-items: center;
+        background-color: rgb(255, 246, 228);
+        border: 1px solid wheat;
+        & p {
+            color: rgb(123, 48, 242);
+        }
+        & .text-socializare {
+            height: 100%;
+            line-height: 2px;
+        }
+        & h3 {
+            font-size: 40px;
+            color: gray
+        }
+    }
+    @include mq('med') {
+        @include flexy($dir: row);
+        column-gap: 10px;
+    }
+}

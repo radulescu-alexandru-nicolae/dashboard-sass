@@ -1,0 +1,22 @@
+.traffic {
+    margin: auto;
+    @include flexy($dir: column);
+    width: 100%;
+    border-bottom: 2px solid wheat;
+    padding-bottom: 10px;
+    & canvas {
+        max-width: 500px;
+        max-height: 300px;
+    }
+    @include mq('med') {
+        border-bottom: unset;
+        & canvas {
+            max-width: unset;
+        }
+    }
+    @include mq('lg') {
+        & canvas {
+            max-height: 500px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.message-settings {
+    @include mq('lg') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        .message {
+            & .container-message {
+                height: 362px;
+                & textarea {
+                    height: 140px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.charts {
+    @include flexy($dir: column);
+    row-gap: 10px;
+    @include mq('med') {
+        .container-daily-mobile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            & .traffic {
+                height: 400px;
+                border: 1px solid wheat;
+            }
+            & canvas {
+                min-height: 250px;
+                max-height: 250px;
+                max-width: 400px;
+            }
+        }
+    }
+    @include mq('lg') {
+        & .container-daily-mobile {
+            & canvas {
+                min-height: 350px;
+                max-height: 350px;
+                max-width: 650px;
+            }
+        }
+    }
+}

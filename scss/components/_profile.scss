@@ -1,0 +1,38 @@
+.container-profile {
+    @include flexy($dir: row, $just: space-between, $wrap: nowrap);
+    align-items: center;
+    & .bell {
+        width: 40px;
+        @include flexy($just: center);
+        align-items: center;
+    }
+    & .bell i {
+        color: white;
+        font-size: 20px;
+        position: relative;
+    }
+    & .bell i::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: green;
+        border-radius: 50%;
+        top: -2px;
+        right: -5px;
+    }
+    & .container-name-img {
+        @include flexy($dir: row, $just: space-around, $wrap: nowrap);
+        align-items: center;
+        column-gap: 10px;
+        font-size: 0.9em;
+        height: 50%;
+        border-left: 1px solid rgb(190, 190, 190);
+        padding-left: 5px;
+        margin-right: 5px;
+    }
+    & img {
+        height: 100%;
+        border-radius: 100%;
+    }
+}

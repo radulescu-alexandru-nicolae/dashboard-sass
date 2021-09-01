@@ -1,0 +1,83 @@
+.settings {
+    & .container-settings {
+        width: $dimension-main;
+        margin: auto;
+        @include flexy($dir: column);
+        row-gap: 20px;
+        & .header-settings h2 {
+            text-transform: uppercase;
+            font-size: $font-size-h2;
+        }
+        & .buttoane {
+            @include flexy($dir: column);
+            row-gap: 10px;
+            & .b1 {
+                @include flexy($dir: row, $just: space-between);
+                align-items: center;
+                & button {
+                    border: none;
+                    background-color: rgb(123, 48, 242);
+                    color: white;
+                    padding: 5px 20px 5px 20px;
+                    border-radius: 30px;
+                    min-width: 100px;
+                    width: 30%;
+                    max-width: 150px;
+                    height: 50px;
+                    @include flexy($just: flex-start);
+                    align-items: center;
+                    position: relative;
+                    border: 2px solid gray;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 30px;
+                        width: 30px;
+                        background-color: white;
+                        border-radius: 100%;
+                        right: 10px;
+                        border: 1px solid gray;
+                    }
+                }
+            }
+        }
+    }
+    & .time-form {
+        @include flexy($dir: column);
+        row-gap: 20px;
+        & select {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(255, 239, 210);
+            border: 2px solid wheat;
+            border-radius: 5px;
+        }
+        & .save {
+            @include flexy($dir: row, $just: space-between);
+            & button {
+                width: 45%;
+                height: 60px;
+                color: white;
+                text-transform: uppercase;
+                @include flexy($just: center);
+                align-items: center;
+                border: none;
+                border-radius: 5px;
+            }
+            & button:nth-child(1) {
+                background-color: rgb(123, 48, 242);
+            }
+            & button:nth-child(2) {
+                background-color: rgb(168, 166, 166);
+            }
+        }
+    }
+    @include mq('med') {
+        & .buttoane {
+            & .b1 {
+                @include flexy($dir: row, $just: flex-start);
+                max-width: 400px;
+            }
+        }
+    }
+}
