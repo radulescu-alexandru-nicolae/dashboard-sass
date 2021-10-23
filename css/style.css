@@ -337,7 +337,7 @@ template {
   display: none;
 }
 
-body {
+body .container {
   display: grid;
   grid-template-columns: minmax(100px, 1fr);
   grid-template-rows: 60px auto;
@@ -345,12 +345,12 @@ body {
   background-color: #fff;
 }
 @media (min-width: 100px) {
-  body {
+  body .container {
     grid-template-areas: "header" "nav" "main";
   }
 }
 @media (min-width: 800px) {
-  body {
+  body .container {
     grid-template-areas: "header header" "nav main" "nav main";
     grid-template-columns: 100px 1fr;
   }
@@ -629,6 +629,7 @@ nav i {
   align-items: center;
   border-radius: 20px;
   transition: 0.5s all ease;
+  cursor: pointer;
 }
 .traffic-header li:nth-child(1) {
   background-color: #53f556;
@@ -650,7 +651,7 @@ nav i {
   margin: auto;
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 10px;
 }
 
 .social-stats {

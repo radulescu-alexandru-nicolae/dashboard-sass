@@ -2,5 +2,5 @@
     width: $dimension-main;
     margin: auto;
     @include flexy($dir: column);
-    row-gap: 30px;
+    row-gap: 10px;
 }

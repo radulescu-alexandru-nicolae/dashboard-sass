@@ -13,7 +13,7 @@
     }
     @else if $value<$sm {
         @media(max-width: $value) {
-            @content;
+            @content;   
         }
     }
     @else {
